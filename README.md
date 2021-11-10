@@ -33,7 +33,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ## Screens
 
-### Home Fragment
+### **Home Fragment**
 * It shows all the Pokémons in a paginated manner.
 * Pokémons are loaded in batches of 20 when the user reaches the end of the list.
 * Shimmer animation is displayed when Pokémons are being loaded.
