@@ -40,6 +40,10 @@ The app allows users to view Pokémons, search them and add them to their favori
 * It allows the user to view Pokémons of all types or alternatively filter them based on the Pokémon's type.
 * During type-filtering of Pokémons, a combination of upto 2 types is supported.
 
+### Info Fragment
+* It shows the details of the selected Pokémon inlcuding it's description, basic information and stats.
+* The background color of this fragment is adaptable based on the color of the selected Pokémon.
+
 ### Search Fragment
 * It allows the user to search through all the Pokémons to find a particular Pokémon using it's name.
 * The user can add the searched Pokémons to their favorites list as the favorite button is avilable on each card.
