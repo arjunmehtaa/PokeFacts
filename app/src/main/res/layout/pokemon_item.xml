@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@color/bg_color"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/pokemon_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:alpha="0.7"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            tools:text="#25" />
+
+        <LinearLayout
+            android:id="@+id/types_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/pokemon_number"
+            android:layout_alignBottom="@id/pokemon_number"
+            android:layout_marginVertical="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/pokemon_image"
+            android:layout_toEndOf="@id/pokemon_number">
+
+            <TextView
+                android:id="@+id/poke_info_type_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@drawable/rounded_border"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:paddingHorizontal="8dp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="12sp"
+                app:autoSizeMinTextSize="1sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
+                tools:text="grass" />
+
+            <TextView
+                android:id="@+id/poke_info_type_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@drawable/rounded_border"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:paddingHorizontal="8dp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="12sp"
+                app:autoSizeMinTextSize="1sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
+                tools:text="electric" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pokemon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@+id/pokemon_number"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:layout_toStartOf="@id/favorite_button"
+            android:alpha="0.7"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            tools:text="Pikachu" />
+
+        <ToggleButton
+            android:id="@+id/favorite_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/types_linear_layout"
+            android:layout_alignBottom="@id/pokemon_name"
+            android:layout_toStartOf="@id/pokemon_image"
+            android:background="@null"
+            android:drawablePadding="8dp"
+            android:checked="false"
+            android:drawableBottom="@drawable/favorite_button_selector"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="10dp"
+            android:textSize="0sp" />
+
+        <ImageView
+            android:id="@+id/pokemon_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

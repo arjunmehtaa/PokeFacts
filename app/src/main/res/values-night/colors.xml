@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color">#FFFFFF</color>
+    <color name="border_color">#DDFFFFFF</color>
+    <color name="bg_color">#3A3B3C</color>
+    <color name="title_color">#EEEEEE</color>
+    <color name="selector_default">#666666</color>
+    <color name="selector_pressed">#FFFFFF</color>
+    <color name="selector_checked">#EEEEEE</color>
+    <color name="bottom_nav_background">#202020</color>
+</resources>

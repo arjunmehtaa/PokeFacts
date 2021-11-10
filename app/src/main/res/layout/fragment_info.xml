@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/poke_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ui.info.InfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/poke_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/poke_fav"
+            android:layout_width="72dp"
+            android:layout_height="64dp"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="20dp"
+            android:src="@drawable/favorite_border"
+            android:tag="not_favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/poke_info_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_back" />
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_info_image">
+
+            <TextView
+                android:id="@+id/poke_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:textColor="@color/text_color"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toStartOf="@id/ll"
+                app:layout_constraintTop_toBottomOf="@id/poke_info_image"
+                tools:text="#25" />
+
+            <TextView
+                android:id="@+id/poke_info_type_one"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="6dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@drawable/rounded_border"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:paddingHorizontal="12dp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="grass" />
+
+            <TextView
+                android:id="@+id/poke_info_type_two"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="6dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@drawable/rounded_border"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:paddingHorizontal="12dp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="electric" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/poke_name"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="36dp"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll"
+            tools:text="Pikachu" />
+
+        <TextView
+            android:id="@+id/poke_genera"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="16dp"
+            android:alpha="0.7"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="@color/text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_name"
+            tools:text="Mouse Pokémon" />
+
+        <TextView
+            android:id="@+id/poke_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0.7"
+            android:text="@string/description"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_genera" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/poke_card_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.7"
+            app:cardBackgroundColor="@color/bg_color"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_desc">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/poke_info_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginVertical="4dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="Description goes here" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/poke_basic_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0.7"
+            android:text="@string/basic_info"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_card_one" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/poke_card_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.7"
+            app:cardBackgroundColor="@color/bg_color"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_basic_info">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/poke_info_xp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/base_xp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_xp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/height"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/weight"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_capture_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_weight"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/catch_rate"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_xp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="100" />
+
+                <TextView
+                    android:id="@+id/poke_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_xp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="139 cm" />
+
+                <TextView
+                    android:id="@+id/poke_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="35 kg" />
+
+                <TextView
+                    android:id="@+id/poke_capture_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_weight"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="70" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/poke_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0.7"
+            android:text="@string/stats"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_card_two" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.7"
+            app:cardBackgroundColor="@color/bg_color"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poke_stats">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_three"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/poke_info_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/hp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/poke_info_hp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/attack"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_defense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_attack"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/defense"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_special_attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_defense"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/special_attack"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_special_defense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_special_attack"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/special_defense"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_info_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_info_special_defense"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/speed"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poke_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="78" />
+
+                <TextView
+                    android:id="@+id/poke_attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/poke_hp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="84" />
+
+                <TextView
+                    android:id="@+id/poke_defense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_attack"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="78" />
+
+                <TextView
+                    android:id="@+id/poke_special_attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_defense"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="109" />
+
+                <TextView
+                    android:id="@+id/poke_special_defense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_special_attack"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="85" />
+
+                <TextView
+                    android:id="@+id/poke_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/poke_special_defense"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    tools:text="100" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/bg_color"
+    app:cardElevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/pokemon_number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/rounded_background"
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/pokemon_name"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_background"
+            android:textColor="@color/text_color"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pokemon_number" />
+
+        <ImageView
+            android:id="@+id/pokemon_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rounded_background"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

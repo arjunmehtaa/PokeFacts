@@ -1,0 +1,9 @@
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shimmer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <include layout="@layout/pokemon_item_placeholder" />
+
+</com.facebook.shimmer.ShimmerFrameLayout>

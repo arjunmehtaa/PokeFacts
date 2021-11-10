@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PokéFacts</string>
+    <string name="pokemon_number_format">#%d</string>
+    <string name="pokemon_image_url">https://assets.pokemon.com/assets/cms2/img/pokedex/full/%s.png</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="base_xp">Base XP</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="stats">Stats</string>
+    <string name="hp">HP</string>
+    <string name="attack">Attack</string>
+    <string name="defense">Defense</string>
+    <string name="special_attack">Special Attack</string>
+    <string name="special_defense">Special Defense</string>
+    <string name="speed">Speed</string>
+    <string name="height_format">%d cm</string>
+    <string name="weight_format">%.1f kg</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_fragment">Favorite Fragment</string>
+    <string name="favorite_tag">favorite</string>
+    <string name="not_favorite_tag">not_favorite</string>
+    <string name="toast_added_to_favorites">Added %s to Favorites.</string>
+    <string name="toast_removed_from_favorites">Removed %s from Favorites.</string>
+    <string name="description">Description</string>
+    <string name="catch_rate">Catch Rate</string>
+    <string name="check_internet_connection">Check internet connection</string>
+</resources>
