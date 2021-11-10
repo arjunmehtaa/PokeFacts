@@ -3,6 +3,15 @@
 PokéFacts is an open-source Pokémon Database app for Android based on PokéAPI and powered by Kotlin.
 The app allows users to view Pokémons, search them and add them to their favorites list.
 
+## Architecture
+
+* This app follows Clean Architecture Principles paired with MVVM architecture.
+* The project is divided into three modules app, data and domain.
+* The app module contains all the mobile-app specific code including views, viewmodels, activities and adapters. 
+* The data module contains all the code that handles data. This includes handling the Retrofit calls and reading/writing to RoomDB.
+* The domain module contains the basic blueprint and business logic of the application. It is a Java/Kotlin Library with no Android-specific code and holds the Model(Data Classes), Interfaces and Use Cases.  
+* Read more about Clean Architecture at https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
 ## API Used
 
 * PokeAPI is used for retreiving Pokemon information. 
