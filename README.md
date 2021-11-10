@@ -16,7 +16,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 * PokéAPI is used for retreiving Pokémon information. 
 * The *pokemon* endpoint is used for retreiving details of a single Pokémon.
-* The *limit* endpoint is used for getting a list of all Pokémon names (To support search functionality).
+* The *limit* endpoint is used for getting a list of all Pokémon names (to support search functionality).
 * Read more about PokéAPI at https://pokeapi.co/
 
 
