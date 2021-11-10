@@ -6,7 +6,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 ## Architecture
 
 * This app follows Clean Architecture Principles paired with MVVM architecture.
-* The project is divided into three modules app, data and domain.
+* The project is divided into three modules *app*, *data* and *domain*.
 * The app module contains all the mobile-app specific code including views, viewmodels, activities and adapters. 
 * The data module contains all the code that handles data. This includes handling the Retrofit calls and reading/writing to RoomDB.
 * The domain module contains the basic blueprint and business logic of the application. It is a Java/Kotlin Library with no Android-specific code and holds the Model(Data Classes), Interfaces and Use Cases.  
@@ -14,10 +14,10 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ## API Used
 
-* PokeAPI is used for retreiving Pokemon information. 
-* The pokemon endpoint is used for retreiving details of a single Pokemon.
-* The limit endpoint is used for getting a list of all Pokemon names (To support search functionality).
-* Read more about PokeAPI at https://pokeapi.co/
+* PokéAPI is used for retreiving Pokémon information. 
+* The *pokemon* endpoint is used for retreiving details of a single Pokémon.
+* The *limit* endpoint is used for getting a list of all Pokémon names (To support search functionality).
+* Read more about PokéAPI at https://pokeapi.co/
 
 
 ## Libraries Used
