@@ -41,10 +41,10 @@ The app allows users to view Pokémons, search them and add them to their favori
 * During type-filtering of Pokémons, a combination of upto 2 types is supported.
 
 <p float="left">
-  <img src="Screenshots/1.jpg" width="15%" />
-  <img src="Screenshots/2.jpg" width="15%" />
-  <img src="Screenshots/3.jpg" width="15%" />
-  <img src="Screenshots/4.jpg" width="15%" />
+  <img src="Screenshots/1.jpg" width="22%" />
+  <img src="Screenshots/2.jpg" width="22%" />
+  <img src="Screenshots/3.jpg" width="22%" />
+  <img src="Screenshots/4.jpg" width="22%" />
 </p>
 
 ### Info Fragment
