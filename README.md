@@ -39,3 +39,13 @@ The app allows users to view Pokémons, search them and add them to their favori
 * Shimmer animation is displayed when Pokémons are being loaded.
 * It allows the user to view Pokémons of all types or alternatively filter them based on the Pokémon's type.
 * During type-filtering of Pokémons, a combination of upto 2 types is supported.
+
+### Search Fragment
+* It allows the user to search through all the Pokémons to find a particular Pokémon using it's name.
+* The user can add the searched Pokémons to their favorites list as the favorite button is avilable on each card.
+
+### Favorites Fragement 
+* It shows all the Pokémons that the user has added in the past.
+* Favorite Pokémons are saved in a Room Database and can even be viewed even without an internet connection.
+* A Pokémon can be added to the user's Favorites Pokémons by clicking the Add to Favorite button on a Pokémon's card on the Home Fragment, Search Fragment and the Info Fragment.
+* A Pokémon can be removed from the user's Favorites Pokémons by unchecking the Add to Favorite button on a Pokémon's card on the Home Fragment, Search Fragment, Info Fragment and even the Favorite Fragment itself.
