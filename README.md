@@ -40,6 +40,13 @@ The app allows users to view Pokémons, search them and add them to their favori
 * It allows the user to view Pokémons of all types or alternatively filter them based on the Pokémon's type.
 * During type-filtering of Pokémons, a combination of upto 2 types is supported.
 
+<p float="left">
+  <img src="Screenshots/1.jpg" width="300" />
+  <img src="Screenshots/2.jpg" width="300" /> 
+  <img src="Screenshots/3.jpg" width="300" />
+  <img src="Screenshots/4.jpg" width="300" />
+</p>
+
 ### Info Fragment
 * It shows the details of the selected Pokémon inlcuding it's description, basic information and stats.
 * The background color of this fragment is adaptable based on the color of the selected Pokémon.
