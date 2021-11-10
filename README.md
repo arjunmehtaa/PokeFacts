@@ -54,14 +54,14 @@ The app allows users to view Pokémons, search them and add them to their favori
 <br/>
 
 <p float="left">
-  <img src="Screenshots/5.jpg" width="33%" />
-  <img src="Screenshots/6.jpg" width="33%" />
-  <img src="Screenshots/7.jpg" width="33%" />
+  <img src="Screenshots/5.jpg" width="24%" />
+  <img src="Screenshots/6.jpg" width="24%" />
+  <img src="Screenshots/7.jpg" width="24%" />
 </p>
 <p float="left">
-  <img src="Screenshots/8.jpg" width="33%" />
-  <img src="Screenshots/9.jpg" width="33%" />
-  <img src="Screenshots/10.jpg" width="33%" />
+  <img src="Screenshots/8.jpg" width="24%" />
+  <img src="Screenshots/9.jpg" width="24%" />
+  <img src="Screenshots/10.jpg" width="24%" />
 </p>
 
 ### Search Fragment
