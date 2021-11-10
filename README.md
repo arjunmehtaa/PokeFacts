@@ -13,12 +13,12 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ## Libraries Used
 
-* Retrofit            Used to handle API calls to PokéAPI. 
-* Koin                Used for Dependancy Injection.
-* Room                Used to store favorite Pokémons in a Room Database for offline viewing.
-* Facebook Shimmer    Used for loading animations throughout the app.
-* Android Palette     Used to create a Color Palette based on the Pokémon's color for Pokémon based theming.
-* Glide               Used to load Pokémon images into ImageViews and handle image-caching.
+* **Retrofit** - Used to handle API calls to PokéAPI. 
+* **Koin** - Used for Dependancy Injection.
+* **Room** - Used to store favorite Pokémons in a Room Database for offline viewing.
+* **Facebook Shimmer** - Used for loading animations throughout the app.
+* **Android Palette** - Used to create a Color Palette based on the Pokémon's color for Pokémon based theming.
+* **Glide** - Used to load Pokémon images into ImageViews and handle image-caching.
 
 
 
