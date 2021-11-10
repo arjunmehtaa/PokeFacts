@@ -51,6 +51,18 @@ The app allows users to view Pokémons, search them and add them to their favori
 ### Info Fragment
 * It shows the details of the selected Pokémon inlcuding it's description, basic information and stats.
 * The background color of this fragment is adaptable based on the color of the selected Pokémon.
+<br/>
+
+<p float="left">
+  <img src="Screenshots/5.jpg" width="33%" />
+  <img src="Screenshots/6.jpg" width="33%" />
+  <img src="Screenshots/7.jpg" width="33%" />
+</p>
+<p float="left">
+  <img src="Screenshots/8.jpg" width="33%" />
+  <img src="Screenshots/9.jpg" width="33%" />
+  <img src="Screenshots/10.jpg" width="33%" />
+</p>
 
 ### Search Fragment
 * It allows the user to search through all the Pokémons to find a particular Pokémon using it's name.
