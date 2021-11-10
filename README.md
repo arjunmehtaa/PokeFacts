@@ -39,7 +39,9 @@ The app allows users to view Pokémons, search them and add them to their favori
 * Shimmer animation is displayed when Pokémons are being loaded.
 * It allows the user to view Pokémons of all types or alternatively filter them based on the Pokémon's type.
 * During type-filtering of Pokémons, a combination of upto 2 types is supported.
-\
+<br/>
+<br/>
+<br/>
 
 <p float="left">
   <img src="Screenshots/1.jpg" width="22%" />
