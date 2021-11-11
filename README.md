@@ -1,5 +1,3 @@
-*Authored by Arjun Mehta*
-<br/>
 # PokéFacts
 
 PokéFacts is an open-source Pokémon Database app for Android based on PokéAPI and powered by Kotlin.
