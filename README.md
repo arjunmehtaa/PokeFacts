@@ -70,8 +70,22 @@ The app allows users to view Pokémons, search them and add them to their favori
 * It allows the user to search through all the Pokémons to find a particular Pokémon using it's name.
 * The user can add the searched Pokémons to their favorites list as the favorite button is avilable on each card.
 
+<p float="left">
+  <img src="Screenshots/14.jpg" width="24%" />
+  <img src="Screenshots/15.jpg" width="24%" />
+  <img src="Screenshots/16.jpg" width="24%" />
+  <img src="Screenshots/17.jpg" width="24%" />
+</p>
+
 ### **Favorites Fragement**
 * It shows all the Pokémons that the user has added to their favorites list in the past.
 * Favorite Pokémons are saved in a Room Database and can even be viewed even without an internet connection.
 * A Pokémon can be added to the user's Favorites Pokémons by clicking the Add to Favorite button on a Pokémon's card on the Home Fragment, Search Fragment and the Info Fragment.
 * A Pokémon can be removed from the user's Favorites Pokémons by unchecking the Add to Favorite button on a Pokémon's card on the Home Fragment, Search Fragment, Info Fragment and even the Favorite Fragment itself.
+
+<p float="left">
+  <img src="Screenshots/18.jpg" width="24%" />
+  <img src="Screenshots/19.jpg" width="24%" />
+  <img src="Screenshots/20.jpg" width="24%" />
+  <img src="Screenshots/21.jpg" width="24%" />
+</p>
