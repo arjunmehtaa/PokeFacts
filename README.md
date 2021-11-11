@@ -39,7 +39,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ## Libraries Used
 
-* **Retrofit** - Used to handle API calls to PokéAPI. 
+* **[Retrofit]**(https://square.github.io/retrofit/) - Used to handle API calls to PokéAPI. 
 * **Koin** - Used for Dependancy Injection.
 * **Room** - Used to store favorite Pokémons in a Room Database for offline viewing.
 * **Facebook Shimmer** - Used for loading animations throughout the app.
