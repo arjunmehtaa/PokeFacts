@@ -81,7 +81,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ### **Search Fragment**
 * It allows the user to search through all the Pokémons to find a particular Pokémon using it's name.
-* The user can add the searched Pokémons to their favorites list as the favorite button is avilable on each card.
+* The user can add the searched Pokémons to their favorites list as the favorite button is available on each card.
 
 <p float="left">
   <img src="Screenshots/14.jpg" width="24%" />
