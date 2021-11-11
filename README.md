@@ -79,7 +79,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ### **Favorites Fragement**
 * It shows all the Pokémons that the user has added to their favorites list in the past.
-* Favorite Pokémons are saved in a Room Database and can even be viewed even without an internet connection.
+* Favorite Pokémons are saved in a Room Database and can be viewed even without an internet connection.
 * A Pokémon can be added to the user's Favorites Pokémons by clicking the Add to Favorite button on a Pokémon's card on the Home Fragment, Search Fragment and the Info Fragment.
 * A Pokémon can be removed from the user's Favorites Pokémons by unchecking the Add to Favorite button on a Pokémon's card on the Home Fragment, Search Fragment, Info Fragment and even the Favorite Fragment itself.
 
