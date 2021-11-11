@@ -39,12 +39,12 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ## Libraries Used
 
-* **Retrofit** - Used to handle API calls to PokéAPI. 
-* **Koin** - Used for Dependency Injection.
-* **Room** - Used to store favorite Pokémons in a Room Database for offline viewing.
-* **Facebook Shimmer** - Used for loading animations throughout the app.
-* **Android Palette** - Used to create a Color Palette based on the Pokémon's color for Pokémon based theming.
-* **Glide** - Used to load Pokémon images into ImageViews and handle image-caching.
+* **[Retrofit](https://square.github.io/retrofit/)** - Used to handle API calls to PokéAPI. 
+* **[Koin](https://insert-koin.io/)** - Used for Dependency Injection.
+* **[Room](https://developer.android.com/jetpack/androidx/releases/room)** - Used to store favorite Pokémons in a Room Database for offline viewing.
+* **[Facebook Shimmer](https://facebook.github.io/shimmer-android/)** - Used for loading animations throughout the app.
+* **[Android Palette](https://developer.android.com/reference/androidx/palette/graphics/Palette)** - Used to create a Color Palette based on the Pokémon's color for Pokémon based theming.
+* **[Glide](https://bumptech.github.io/glide/)** - Used to load Pokémon images into ImageViews and handle image-caching.
 
 
 
