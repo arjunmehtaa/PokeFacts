@@ -31,8 +31,8 @@ The app allows users to view Pokémons, search them and add them to their favour
 
 ## API Used
 
-* PokéAPI is used for retreiving Pokémon information. 
-* The *pokemon* endpoint is used for retreiving details of a single Pokémon.
+* PokéAPI is used for retrieving Pokémon information. 
+* The *pokemon* endpoint is used for retrieving  details of a single Pokémon.
 * The *limit* endpoint is used for getting a list of all Pokémon names (to support search functionality).
 * Read more about PokéAPI at https://pokeapi.co/
 
@@ -40,7 +40,7 @@ The app allows users to view Pokémons, search them and add them to their favour
 ## Libraries Used
 
 * **Retrofit** - Used to handle API calls to PokéAPI. 
-* **Koin** - Used for Dependancy Injection.
+* **Koin** - Used for Dependency Injection.
 * **Room** - Used to store favourite Pokémons in a Room Database for offline viewing.
 * **Facebook Shimmer** - Used for loading animations throughout the app.
 * **Android Palette** - Used to create a Color Palette based on the Pokémon's color for Pokémon based theming.
@@ -55,7 +55,7 @@ The app allows users to view Pokémons, search them and add them to their favour
 * Pokémons are loaded in batches of 20 when the user reaches the end of the list.
 * Shimmer animation is displayed when Pokémons are being loaded.
 * It allows the user to view Pokémons of all types or alternatively filter them based on the Pokémon's type.
-* During type-filtering of Pokémons, a combination of upto 2 types is supported.
+* During type-filtering of Pokémons, a combination of up to 2 types is supported.
 
 <p float="left">
   <img src="Screenshots/1.jpg" width="24%" />
@@ -65,7 +65,7 @@ The app allows users to view Pokémons, search them and add them to their favour
 </p>
 
 ### **Info Fragment**
-* It shows the details of the selected Pokémon inlcuding it's description, basic information and stats.
+* It shows the details of the selected Pokémon including it's description, basic information and stats.
 * The background color of this fragment is adaptable based on the color of the selected Pokémon.
 
 <p float="left">
@@ -90,7 +90,7 @@ The app allows users to view Pokémons, search them and add them to their favour
   <img src="Screenshots/17.jpg" width="24%" />
 </p>
 
-### **Favourites Fragement**
+### **Favourites Fragment**
 * It shows all the Pokémons that the user has added to their favourites list in the past.
 * Favorite Pokémons are saved in a Room Database and can be viewed even without an internet connection.
 * A Pokémon can be added to the user's Favourites list by clicking the Add to Favorite button on a Pokémon's card in the Home Fragment, Search Fragment or the Info Fragment.
