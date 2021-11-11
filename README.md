@@ -4,16 +4,16 @@ PokéFacts is an open-source Pokémon Database app for Android based on PokéAPI
 The app allows users to view Pokémons, search them and add them to their favorites list.
 
 <p float="left">
-  <img src="Screenshots/27.jpg" width="9.8%" />
-  <img src="Screenshots/28.jpg" width="9.8%" />
-  <img src="Screenshots/29.jpg" width="9.8%" />
-  <img src="Screenshots/30.jpg" width="9.8%" />
-  <img src="Screenshots/31.jpg" width="9.8%" />
-  <img src="Screenshots/22.jpg" width="9.8%" />
-  <img src="Screenshots/23.jpg" width="9.8%" />
-  <img src="Screenshots/24.jpg" width="9.8%" />
-  <img src="Screenshots/25.jpg" width="9.8%" />
-  <img src="Screenshots/26.jpg" width="9.8%" />
+  <img src="Screenshots/27.jpg" width="9.5%" />
+  <img src="Screenshots/28.jpg" width="9.5%" />
+  <img src="Screenshots/29.jpg" width="9.5%" />
+  <img src="Screenshots/30.jpg" width="9.5%" />
+  <img src="Screenshots/31.jpg" width="9.5%" />
+  <img src="Screenshots/22.jpg" width="9.5%" />
+  <img src="Screenshots/23.jpg" width="9.5%" />
+  <img src="Screenshots/24.jpg" width="9.5%" />
+  <img src="Screenshots/25.jpg" width="9.5%" />
+  <img src="Screenshots/26.jpg" width="9.5%" />
 </p>
 
 ## Architecture
