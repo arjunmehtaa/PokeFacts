@@ -7,13 +7,13 @@ The app allows users to view Pokémons, search them and add them to their favori
   <img src="Screenshots/27.jpg" width="9.9%" />
   <img src="Screenshots/28.jpg" width="9.9%" />
   <img src="Screenshots/29.jpg" width="9.9%" />
-  <img src="Screenshots/30.jpg" width="9.9%%" />
-  <img src="Screenshots/31.jpg" width="9.9%%" />
-  <img src="Screenshots/22.jpg" width="9.9%%" />
-  <img src="Screenshots/23.jpg" width="9.9%%" />
-  <img src="Screenshots/24.jpg" width="9.9%%" />
-  <img src="Screenshots/25.jpg" width="9.9%%" />
-  <img src="Screenshots/26.jpg" width="9.9%%" />
+  <img src="Screenshots/30.jpg" width="9.9%" />
+  <img src="Screenshots/31.jpg" width="9.9%" />
+  <img src="Screenshots/22.jpg" width="9.9%" />
+  <img src="Screenshots/23.jpg" width="9.9%" />
+  <img src="Screenshots/24.jpg" width="9.9%" />
+  <img src="Screenshots/25.jpg" width="9.9%" />
+  <img src="Screenshots/26.jpg" width="9.9%" />
 </p>
 
 ## Architecture
