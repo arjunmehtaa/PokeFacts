@@ -11,11 +11,11 @@ The app allows users to view Pokémons, search them and add them to their favori
 * The *data* module contains all the code that handles data. This includes handling the Retrofit calls and reading/writing to RoomDB.
 * The *domain* module contains the basic blueprint and business logic of the application. It is a Java/Kotlin Library with no Android-specific code and holds the Model(Data Classes), Interfaces and Use Cases.  
 * Read more about Clean Architecture at https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-* 
+
 <p float="left">
-  <img src="Screenshots/arch1.jpg" width="33%" />
-  <img src="Screenshots/arch2.jpg" width="33%" />
-  <img src="Screenshots/arch3.jpg" width="33%" />
+  <img src="Screenshots/arch1.png" width="33%" />
+  <img src="Screenshots/arch2.png" width="33%" />
+  <img src="Screenshots/arch3.png" width="33%" />
 </p>
 
 ## API Used
