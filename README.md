@@ -4,16 +4,16 @@ PokéFacts is an open-source Pokémon Database app for Android based on PokéAPI
 The app allows users to view Pokémons, search them and add them to their favorites list.
 
 <p float="left">
-  <img src="Screenshots/27.jpg" width="18%" />
-  <img src="Screenshots/28.jpg" width="18%" />
-  <img src="Screenshots/29.jpg" width="18%" />
-  <img src="Screenshots/30.jpg" width="18%" />
-  <img src="Screenshots/31.jpg" width="18%" />
-  <img src="Screenshots/22.jpg" width="18%" />
-  <img src="Screenshots/23.jpg" width="18%" />
-  <img src="Screenshots/24.jpg" width="18%" />
-  <img src="Screenshots/25.jpg" width="18%" />
-  <img src="Screenshots/26.jpg" width="18%" />
+  <img src="images/27.jpg" width="18%" />
+  <img src="images/28.jpg" width="18%" />
+  <img src="images/29.jpg" width="18%" />
+  <img src="images/30.jpg" width="18%" />
+  <img src="images/31.jpg" width="18%" />
+  <img src="images/22.jpg" width="18%" />
+  <img src="images/23.jpg" width="18%" />
+  <img src="images/24.jpg" width="18%" />
+  <img src="images/25.jpg" width="18%" />
+  <img src="images/26.jpg" width="18%" />
 </p>
 
 ## Architecture
@@ -26,7 +26,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 * Read more about Clean Architecture at https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
 <p float="left">
-  <img src="Screenshots/arch.png" width="100%" />
+  <img src="images/arch.png" width="100%" />
 </p>
 
 ## API Used
@@ -58,10 +58,10 @@ The app allows users to view Pokémons, search them and add them to their favori
 * During type-filtering of Pokémons, a combination of up to 2 types is supported.
 
 <p float="left">
-  <img src="Screenshots/1.jpg" width="24%" />
-  <img src="Screenshots/2.jpg" width="24%" />
-  <img src="Screenshots/3.jpg" width="24%" />
-  <img src="Screenshots/4.jpg" width="24%" />
+  <img src="images/1.jpg" width="24%" />
+  <img src="images/2.jpg" width="24%" />
+  <img src="images/3.jpg" width="24%" />
+  <img src="images/4.jpg" width="24%" />
 </p>
 
 ### **Info Fragment**
@@ -69,14 +69,14 @@ The app allows users to view Pokémons, search them and add them to their favori
 * The background color of this fragment is adaptable based on the color of the selected Pokémon.
 
 <p float="left">
-  <img src="Screenshots/5.jpg" width="24%" />
-  <img src="Screenshots/6.jpg" width="24%" />
-  <img src="Screenshots/7.jpg" width="24%" />
-  <img src="Screenshots/11.jpg" width="24%" />
-  <img src="Screenshots/9.jpg" width="24%" />
-  <img src="Screenshots/10.jpg" width="24%" />
-  <img src="Screenshots/12.jpg" width="24%" />
-  <img src="Screenshots/13.jpg" width="24%" />
+  <img src="images/5.jpg" width="24%" />
+  <img src="images/6.jpg" width="24%" />
+  <img src="images/7.jpg" width="24%" />
+  <img src="images/11.jpg" width="24%" />
+  <img src="images/9.jpg" width="24%" />
+  <img src="images/10.jpg" width="24%" />
+  <img src="images/12.jpg" width="24%" />
+  <img src="images/13.jpg" width="24%" />
 </p>
 
 ### **Search Fragment**
@@ -84,10 +84,10 @@ The app allows users to view Pokémons, search them and add them to their favori
 * The user can add the searched Pokémons to their favorites list as the favorite button is available on each card.
 
 <p float="left">
-  <img src="Screenshots/14.jpg" width="24%" />
-  <img src="Screenshots/15.jpg" width="24%" />
-  <img src="Screenshots/16.jpg" width="24%" />
-  <img src="Screenshots/17.jpg" width="24%" />
+  <img src="images/14.jpg" width="24%" />
+  <img src="images/15.jpg" width="24%" />
+  <img src="images/16.jpg" width="24%" />
+  <img src="images/17.jpg" width="24%" />
 </p>
 
 ### **Favorites Fragment**
@@ -97,8 +97,8 @@ The app allows users to view Pokémons, search them and add them to their favori
 * A Pokémon can be removed from the user's Favorites list by unchecking the Add to Favorite button on a Pokémon's card in the Home Fragment, Search Fragment, Info Fragment or even the Favorite Fragment itself.
 
 <p float="left">
-  <img src="Screenshots/18.jpg" width="24%" />
-  <img src="Screenshots/19.jpg" width="24%" />
-  <img src="Screenshots/20.jpg" width="24%" />
-  <img src="Screenshots/21.jpg" width="24%" />
+  <img src="images/18.jpg" width="24%" />
+  <img src="images/19.jpg" width="24%" />
+  <img src="images/20.jpg" width="24%" />
+  <img src="images/21.jpg" width="24%" />
 </p>
