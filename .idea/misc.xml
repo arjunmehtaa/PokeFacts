@@ -3,16 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/bottom_navigation_background.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/drawable/cancel_icon.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/chip_bg_selector.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/drawable/chip_text_color_selector.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/drawable/favorite_border.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/home.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/drawable/ic_cloud_connection_offline.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/no_internet_icon.xml" value="0.3541666666666667" />
-        <entry key="app/src/main/res/drawable/rounded_background.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/drawable/rounded_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rounded_blended_background.xml" value="0.3541666666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/drawable/rounded_border.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/rounded_border_search_bar.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/rounded_imageview_background.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/search.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/search_icon.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/custom_toolbar.xml" value="0.3380208333333333" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.32395833333333335" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3380208333333333" />
+        <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.25317028985507245" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_info.xml" value="0.2617753623188406" />
+        <entry key="app/src/main/res/layout/fragment_seach.xml" value="0.3359375" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.3359375" />
         <entry key="app/src/main/res/layout/pokemon_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/splash_screen.xml" value="0.165" />
+        <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.3359375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1875" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.20364583333333333" />
       </map>

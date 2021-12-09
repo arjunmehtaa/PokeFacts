@@ -1,14 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <LinearLayout
+        android:id="@+id/home_custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:id="@+id/custom_toolbar_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/title_color"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_custom_toolbar"
+        android:layout_marginHorizontal="16dp"
+        android:fadingEdgeLength="24dp"
+        android:requiresFadingEdge="horizontal"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/types_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkedChip="@id/all_types_chip"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/all_types_chip"
+                style="@style/CustomChipStyle"
+                android:text="@string/all_types" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/bug" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/dark" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/dragon" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/electric" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/fairy" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/fighting" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/fire" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/flying" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/grass" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/ghost" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/ground" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/ice" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/normal" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/water" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/poison" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/psychic" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/steel" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CustomChipStyle"
+                android:text="@string/rock" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
     <com.example.pokefacts.ui.common.BottomFadeEdgeRecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/horizontal_chips"
         android:layout_marginBottom="68dp"
         android:clipToPadding="false"
         android:fadingEdgeLength="64dp"
@@ -20,6 +140,7 @@
         android:id="@+id/shimmer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/horizontal_chips"
         android:layout_gravity="center"
         android:paddingTop="8dp">
 
@@ -44,10 +165,13 @@
 
     <LinearLayout
         android:id="@+id/no_internet_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center"
         android:layout_marginBottom="72dp"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="24dp"
         android:visibility="gone">
@@ -70,4 +194,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>

@@ -15,7 +15,6 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.example.data.utils.Constants
 import com.example.domain.model.Pokemon
 import com.example.pokefacts.R
 import com.example.pokefacts.databinding.PokemonItemBinding
@@ -24,8 +23,9 @@ import com.example.pokefacts.databinding.ShimmerProgressAnimationBinding
 class PokeRecyclerViewAdapter(
     private val clickListener: (Pokemon) -> Unit,
     private val favoriteButtonClickListener: (Pokemon, Boolean) -> Unit,
-    private val showLoadingAnimation: Boolean,
-    private val isPokemonFavorite: (Int) -> Boolean
+    var showLoadingAnimation: Boolean,
+    private val isPokemonFavorite: (Int) -> Boolean,
+    private val lastPosition: Int?
 ) : ListAdapter<Pokemon, PokeRecyclerViewAdapter.PokemonViewHolder>(REPO_COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
@@ -33,7 +33,7 @@ class PokeRecyclerViewAdapter(
         if (viewType == 1) {
             val itemBinding = PokemonItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return PokemonViewHolder(itemBinding)
-        } else if (viewType == 2) {
+        } else if (viewType == 2 || viewType == 3) {
             val itemBinding =
                 ShimmerProgressAnimationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return PokemonViewHolder(itemBinding)
@@ -42,12 +42,12 @@ class PokeRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
-        if (holder.itemViewType == 1) {
-            holder.bind(getItem(position))
-        }
-        if(position == Constants.TOTAL_POKEMONS){
+        if (holder.itemViewType == 3) {
             holder.itemView.layoutParams.height = 0
             holder.itemView.visibility = View.GONE
+        }
+        if (holder.itemViewType == 1) {
+            if (getItem(position) != null) holder.bind(getItem(position))
         }
     }
 
@@ -142,7 +142,11 @@ class PokeRecyclerViewAdapter(
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (position == currentList.size) 2 else 1
+        return if (lastPosition != null) {
+            if (position == lastPosition) 3 else if (position == currentList.size) 2 else 1
+        } else {
+            if (position == currentList.size) 2 else 1
+        }
     }
 
     override fun getItemCount(): Int {

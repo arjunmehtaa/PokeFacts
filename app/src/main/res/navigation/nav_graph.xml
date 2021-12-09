@@ -10,7 +10,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.pokefacts.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
@@ -19,7 +19,7 @@
         android:id="@+id/infoFragment"
         android:name="com.example.pokefacts.ui.info.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info" >
+        tools:layout="@layout/fragment_info">
         <argument
             android:name="pokemon"
             app:argType="com.example.domain.model.Pokemon" />
@@ -28,9 +28,18 @@
         android:id="@+id/favoritesFragment"
         android:name="com.example.pokefacts.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" >
+        tools:layout="@layout/fragment_favorites">
         <action
             android:id="@+id/action_favoritesFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.pokefacts.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
     </fragment>
 </navigation>

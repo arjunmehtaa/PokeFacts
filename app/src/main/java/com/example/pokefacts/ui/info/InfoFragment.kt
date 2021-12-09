@@ -4,15 +4,14 @@ import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.bumptech.glide.Glide
-import com.example.pokefacts.databinding.FragmentInfoBinding
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
@@ -20,6 +19,7 @@ import com.bumptech.glide.request.target.Target
 import com.example.domain.model.Pokemon
 import com.example.domain.model.Type
 import com.example.pokefacts.R
+import com.example.pokefacts.databinding.FragmentInfoBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -85,7 +85,7 @@ class InfoFragment : Fragment() {
             loadImage(pokeInfoImage, pokemon.sprites.other.official_artwork.front_default)
             pokeFav.setOnClickListener { favoriteButtonClickListener(pokeFav, pokemon) }
             dominantColor = pokemon.dominant_color!!
-            viewBinding.pokeScrollView.setBackgroundColor(dominantColor)
+            pokeScrollView.setBackgroundColor(dominantColor)
             activity?.window?.statusBarColor = dominantColor
         }
     }

@@ -29,7 +29,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/bottom_navigation_background"
         android:elevation="8dp"
-        app:itemIconTint="@drawable/bottom_navigation_color_selector"
+        app:itemIconTint="@color/bottom_navigation_color_selector"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_nav"
         app:layout_constraintBottom_toBottomOf="parent"

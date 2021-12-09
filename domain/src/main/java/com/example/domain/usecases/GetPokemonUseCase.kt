@@ -7,18 +7,13 @@ import com.example.domain.repository.RepositoryInterface
 
 class GetPokemonUseCase(private val repository: RepositoryInterface) {
 
-    private var list: MutableList<Pokemon> = mutableListOf()
-
-    suspend fun getPokemon(numberOfPokemons: Int, offset: Int): MutableList<Pokemon> {
-        for (i in (offset + 1)..(numberOfPokemons + offset)) {
-            val pokemon = repository.getPokemon(i)
-            val species = repository.getSpecies(i)
-            pokemon.genera = getPokemonGenera(species.genera)
-            pokemon.description = getPokemonDescription(species.flavor_text_entries)
-            pokemon.capture_rate = species.capture_rate
-            if(!list.contains(pokemon)) list.add(pokemon)
-        }
-        return list
+    suspend fun getPokemon(id: Int): Pokemon {
+        val pokemon = repository.getPokemon(id)
+        val species = repository.getSpecies(id)
+        pokemon.genera = getPokemonGenera(species.genera)
+        pokemon.description = getPokemonDescription(species.flavor_text_entries)
+        pokemon.capture_rate = species.capture_rate
+        return pokemon
     }
 
     private fun getPokemonGenera(generaList: List<Genera>?): String {

@@ -1,4 +1,4 @@
-package com.example.pokefacts.ui.home
+package com.example.pokefacts.ui.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.data.utils.Constants
 import com.example.domain.model.Pokemon
 import com.example.domain.model.PokemonResults
-import com.example.domain.model.PokemonTypeResults
 import com.example.domain.usecases.*
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
@@ -15,53 +14,31 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 
-class HomeViewModel(
-    private val getPokemonUseCase: GetPokemonUseCase,
+class SearchViewModel(
     private val addFavoritePokemonUseCase: AddFavoritePokemonUseCase,
     private val deleteFavoritePokemonUseCase: DeleteFavoritePokemonUseCase,
     private val getIsPokemonFavoriteUseCase: GetIsPokemonFavoriteUseCase,
-    private val getAllPokemonOfTypeUseCase: GetAllPokemonOfTypeUseCase,
-    private val getAllPokemonNamesUseCase: GetAllPokemonNamesUseCase
+    private val getAllPokemonNamesUseCase: GetAllPokemonNamesUseCase,
+    private val getPokemonUseCase: GetPokemonUseCase
 ) : ViewModel(), KoinComponent {
 
     private var coroutineExceptionHandler: CoroutineExceptionHandler
     private var job: Job = Job()
     val list: MutableList<Pokemon> = mutableListOf()
 
-    private val _myPokemon: MutableLiveData<Result<MutableList<Pokemon>>> = MutableLiveData()
-    val myPokemon: LiveData<Result<MutableList<Pokemon>>>
-        get() = _myPokemon
-
-    private val _myTypePokemon: MutableLiveData<Result<PokemonTypeResults>> = MutableLiveData()
-    val myTypePokemon: LiveData<Result<PokemonTypeResults>>
-        get() = _myTypePokemon
-
     private val _myPokemonNamesList: MutableLiveData<Result<PokemonResults>> = MutableLiveData()
     val myPokemonNamesList: LiveData<Result<PokemonResults>>
         get() = _myPokemonNamesList
 
+    private val _mySearchedPokemon: MutableLiveData<Result<MutableList<Pokemon>>> = MutableLiveData()
+    val mySearchedPokemon: LiveData<Result<MutableList<Pokemon>>>
+        get() = _mySearchedPokemon
+
     init {
         coroutineExceptionHandler = CoroutineExceptionHandler { _, exception ->
-            _myPokemon.value = Result.Failure(exception)
+            _myPokemonNamesList.value = Result.Failure(exception)
         }
-        pokemonsDisplayed = 0
         getAllPokemonNames()
-    }
-
-    fun getPokemon(pokemonList: MutableList<Pokemon>) {
-        cancelJobIfRunning()
-        job = viewModelScope.launch(coroutineExceptionHandler) {
-            _myPokemon.value = Result.Loading
-            coroutineScope {
-                pokemonList.forEach {
-                    launch(coroutineExceptionHandler) {
-                        if (!checkIfContainsPokemon(list, it)) list.add(getPokemonUseCase.getPokemon(it.id))
-                    }
-                }
-            }
-            list.sortBy { it.id }
-            _myPokemon.value = Result.Success(list)
-        }
     }
 
     fun addFavoritePokemon(pokemon: Pokemon) {
@@ -80,20 +57,27 @@ class HomeViewModel(
         return getIsPokemonFavoriteUseCase.isPokemonFavorite(id)
     }
 
-    fun getPokemonOfType(type : String) {
-        cancelJobIfRunning()
-        job = viewModelScope.launch(coroutineExceptionHandler) {
-            _myTypePokemon.value = Result.Loading
-            _myTypePokemon.value = Result.Success(getAllPokemonOfTypeUseCase.getAllPokemonOfType(type))
-        }
-    }
-
     fun getAllPokemonNames() {
-        cancelJobIfRunning()
-        job = viewModelScope.launch(coroutineExceptionHandler) {
+        viewModelScope.launch(coroutineExceptionHandler) {
             _myPokemonNamesList.value = Result.Loading
             _myPokemonNamesList.value =
                 Result.Success(getAllPokemonNamesUseCase.getAllPokemonNames(Constants.TOTAL_POKEMONS))
+        }
+    }
+
+    fun getPokemon(pokemonList: MutableList<Pokemon>) {
+        cancelJobIfRunning()
+        job = viewModelScope.launch(coroutineExceptionHandler) {
+            _mySearchedPokemon.value = Result.Loading
+            coroutineScope {
+                pokemonList.forEach {
+                    launch(coroutineExceptionHandler) {
+                        if (!checkIfContainsPokemon(list, it)) list.add(getPokemonUseCase.getPokemon(it.id))
+                    }
+                }
+            }
+            list.sortBy { it.id }
+            _mySearchedPokemon.value = Result.Success(list)
         }
     }
 
@@ -104,9 +88,10 @@ class HomeViewModel(
         return false
     }
 
-    private fun cancelJobIfRunning() {
+    fun cancelJobIfRunning() {
         if (job.isActive) {
             job.cancel()
+            _mySearchedPokemon.value = Result.Success(mutableListOf())
         }
     }
 
@@ -116,3 +101,4 @@ class HomeViewModel(
         data class Failure(val throwable: Throwable) : Result<Nothing>()
     }
 }
+
