@@ -33,7 +33,8 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 * PokéAPI is used for retrieving Pokémon information. 
 * The *pokemon* endpoint is used for retrieving  details of a single Pokémon.
-* The *limit* endpoint is used for getting a list of all Pokémon names (to support search functionality).
+* The *type* endpoint is used for getting a list of Pokémon names for a particular type.
+* The *limit* endpoint is used for getting a list of all Pokémon names.
 * Read more about PokéAPI at https://pokeapi.co/
 
 
@@ -55,7 +56,6 @@ The app allows users to view Pokémons, search them and add them to their favori
 * Pokémons are loaded in batches of 20 when the user reaches the end of the list.
 * Shimmer animation is displayed when Pokémons are being loaded.
 * It allows the user to view Pokémons of all types or alternatively filter them based on the Pokémon's type.
-* During type-filtering of Pokémons, a combination of up to 2 types is supported.
 
 <p float="left">
   <img src="images/1.jpg" width="24%" />
@@ -66,7 +66,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 
 ### **Info Fragment**
 * It shows the details of the selected Pokémon including it's description, basic information and stats.
-* The background color of this fragment is adaptable based on the color of the selected Pokémon.
+* The theming of this fragment is adaptable based on the color of the selected Pokémon.
 
 <p float="left">
   <img src="images/5.jpg" width="24%" />
