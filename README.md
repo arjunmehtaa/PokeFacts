@@ -26,7 +26,7 @@ The app allows users to view Pokémons, search them and add them to their favori
 * Read more about Clean Architecture at https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
 <p float="left">
-  <img src="images/arch.png" width="100%" />
+  <img src="images/architecture.png" width="100%" />
 </p>
 
 ## API Used
