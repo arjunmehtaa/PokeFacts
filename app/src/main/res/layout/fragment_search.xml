@@ -70,6 +70,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/search_bar_linear_layout"
         android:layout_marginBottom="68dp"
+        android:layout_marginHorizontal="8dp"
         android:clipToPadding="false"
         android:fadingEdgeLength="64dp"
         android:paddingTop="8dp"

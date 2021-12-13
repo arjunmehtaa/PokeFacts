@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.domain.model.Pokemon
 import com.example.pokefacts.R
 import com.example.pokefacts.databinding.FragmentFavoritesBinding
@@ -64,8 +64,14 @@ class FavoritesFragment : Fragment() {
     private fun setupRecyclerView(adapter: PokeRecyclerViewAdapter) {
         with(viewBinding) {
             recyclerView.adapter = adapter
-            recyclerView.layoutManager = LinearLayoutManager(context)
-            recyclerView.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.bg_color))
+            recyclerView.layoutManager =
+                GridLayoutManager(context, resources.getInteger(R.integer.grid_column_count))
+            recyclerView.setBackgroundColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.bg_color
+                )
+            )
             recyclerView.hasFixedSize()
         }
     }

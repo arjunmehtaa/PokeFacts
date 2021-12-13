@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.3645833333333333" />
+        <entry key="..\:/Users/arjuj/Pokefacts/PokeFacts/app/src/main/res/layout/fragment_favorites.xml" value="0.11503623188405797" />
+        <entry key="..\:/Users/arjuj/Pokefacts/PokeFacts/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/arjuj/Pokefacts/PokeFacts/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/Users/arjuj/Pokefacts/PokeFacts/app/src/main/res/layout/pokemon_item.xml" value="0.11503623188405797" />
+        <entry key="..\:/Users/arjuj/Pokefacts/PokeFacts/app/src/main/res/layout/pokemon_item_placeholder.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/drawable/bottom_navigation_background.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.3541666666666667" />
         <entry key="app/src/main/res/drawable/cancel_icon.xml" value="0.35208333333333336" />
