@@ -266,4 +266,11 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewBinding.allTypesChip.isChecked = true
+        viewBinding.horizontalChips.scrollTo(0, 0)
+        allTypesList.clear()
+    }
 }

@@ -51,7 +51,9 @@ class InfoFragment : Fragment() {
         super.onResume()
         (activity as AppCompatActivity?)?.supportActionBar?.hide()
         activity?.window?.statusBarColor = dominantColor
-        activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation_view)?.visibility = View.GONE
+        activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation_view)?.visibility =
+            View.GONE
+        activity?.window?.navigationBarColor = dominantColor
     }
 
     override fun onStop() {
@@ -59,7 +61,10 @@ class InfoFragment : Fragment() {
         (activity as AppCompatActivity?)?.supportActionBar?.show()
         activity?.window?.statusBarColor =
             ContextCompat.getColor(requireContext(), R.color.bg_color)
-        activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation_view)?.visibility = View.VISIBLE
+        activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation_view)?.visibility =
+            View.VISIBLE
+        activity?.window?.navigationBarColor =
+            ContextCompat.getColor(requireContext(), R.color.bg_color)
     }
 
     private fun setData(pokemon: Pokemon) {
