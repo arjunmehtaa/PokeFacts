@@ -124,7 +124,7 @@
 
     </HorizontalScrollView>
 
-    <com.example.pokefacts.ui.common.BottomFadeEdgeRecyclerView
+    <com.arjuj.pokefacts.ui.common.BottomFadeEdgeRecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
