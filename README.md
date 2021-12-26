@@ -16,6 +16,12 @@ The app allows users to view Pokémons, search them and add them to their favori
   <img src="images/26.jpg" width="18%" />
 </p>
 
+## Google Play Store Link
+
+PokéFacts is now released on the Google Play Store. Download it by clicking the banner below!
+
+[![](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.arjuj.pokefacts)
+
 ## Architecture
 
 * This app follows Clean Architecture Principles paired with MVVM architecture.
