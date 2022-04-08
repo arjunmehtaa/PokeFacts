@@ -16,7 +16,7 @@ import org.koin.core.KoinComponent
 
 class SearchViewModel(
     private val addFavoritePokemonUseCase: AddFavoritePokemonUseCase,
-    private val deleteFavoritePokemonUseCase: DeleteFavoritePokemonUseCase,
+    private val removeFavoritePokemonUseCase: RemoveFavoritePokemonUseCase,
     private val getIsPokemonFavoriteUseCase: GetIsPokemonFavoriteUseCase,
     private val getAllPokemonNamesUseCase: GetAllPokemonNamesUseCase,
     private val getPokemonUseCase: GetPokemonUseCase
@@ -49,7 +49,7 @@ class SearchViewModel(
 
     fun deleteFavoritePokemon(pokemon: Pokemon) {
         viewModelScope.launch {
-            deleteFavoritePokemonUseCase.deleteFavoritePokemon(pokemon)
+            removeFavoritePokemonUseCase.removeFavoritePokemon(pokemon)
         }
     }
 

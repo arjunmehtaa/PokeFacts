@@ -18,7 +18,8 @@ import org.koin.core.KoinComponent
 class HomeViewModel(
     private val getPokemonUseCase: GetPokemonUseCase,
     private val addFavoritePokemonUseCase: AddFavoritePokemonUseCase,
-    private val deleteFavoritePokemonUseCase: DeleteFavoritePokemonUseCase,
+    private val addPokemonUseCase: AddPokemonUseCase,
+    private val removeFavoritePokemonUseCase: RemoveFavoritePokemonUseCase,
     private val getIsPokemonFavoriteUseCase: GetIsPokemonFavoriteUseCase,
     private val getAllPokemonOfTypeUseCase: GetAllPokemonOfTypeUseCase,
     private val getAllPokemonNamesUseCase: GetAllPokemonNamesUseCase
@@ -55,7 +56,13 @@ class HomeViewModel(
             coroutineScope {
                 pokemonList.forEach {
                     launch(coroutineExceptionHandler) {
-                        if (!checkIfContainsPokemon(list, it)) list.add(getPokemonUseCase.getPokemon(it.id))
+                        if (!checkIfContainsPokemon(list, it)) {
+                            val pokemon = getPokemonUseCase.getPokemon(it.id)
+                            list.add(pokemon)
+                            viewModelScope.launch {
+                                addPokemonUseCase.addPokemon(pokemon)
+                            }
+                        }
                     }
                 }
             }
@@ -72,7 +79,7 @@ class HomeViewModel(
 
     fun deleteFavoritePokemon(pokemon: Pokemon) {
         viewModelScope.launch {
-            deleteFavoritePokemonUseCase.deleteFavoritePokemon(pokemon)
+            removeFavoritePokemonUseCase.removeFavoritePokemon(pokemon)
         }
     }
 

@@ -4,7 +4,7 @@ import com.arjuj.domain.model.*
 
 class PokemonItemConverter {
 
-    fun pokemonToRoomPokemon(pokemon: Pokemon) : RoomPokemon{
+    fun pokemonToRoomPokemon(pokemon: Pokemon, isFavorite: Boolean = false): RoomPokemon {
         return RoomPokemon(
             pokemon.id,
             pokemon.base_experience,
@@ -17,7 +17,8 @@ class PokemonItemConverter {
             pokemon.dominant_color,
             pokemon.genera,
             pokemon.description,
-            pokemon.capture_rate
+            pokemon.capture_rate,
+            isFavorite
         )
     }
 

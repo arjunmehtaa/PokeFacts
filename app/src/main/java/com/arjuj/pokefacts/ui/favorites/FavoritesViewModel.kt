@@ -6,15 +6,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.arjuj.domain.model.Pokemon
 import com.arjuj.domain.usecases.AddFavoritePokemonUseCase
-import com.arjuj.domain.usecases.DeleteFavoritePokemonUseCase
 import com.arjuj.domain.usecases.GetFavoritePokemonListUseCase
 import com.arjuj.domain.usecases.GetIsPokemonFavoriteUseCase
+import com.arjuj.domain.usecases.RemoveFavoritePokemonUseCase
 import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 
 class FavoritesViewModel(
     private val addFavoritePokemonUseCase: AddFavoritePokemonUseCase,
-    private val deleteFavoritePokemonUseCase: DeleteFavoritePokemonUseCase,
+    private val removeFavoritePokemonUseCase: RemoveFavoritePokemonUseCase,
     private val getFavoritePokemonListUseCase: GetFavoritePokemonListUseCase,
     private val getIsPokemonFavoriteUseCase: GetIsPokemonFavoriteUseCase
 ) : ViewModel(), KoinComponent {
@@ -44,7 +44,7 @@ class FavoritesViewModel(
 
     fun deleteFavoritePokemon(pokemon : Pokemon){
         viewModelScope.launch {
-            deleteFavoritePokemonUseCase.deleteFavoritePokemon(pokemon)
+            removeFavoritePokemonUseCase.removeFavoritePokemon(pokemon)
             getFavoritePokemonList()
         }
     }

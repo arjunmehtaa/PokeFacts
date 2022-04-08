@@ -24,7 +24,7 @@ abstract class RoomPokemonDatabase : RoomDatabase() {
                     context.applicationContext,
                     RoomPokemonDatabase::class.java,
                     "room_database"
-                ).allowMainThreadQueries().build()
+                ).allowMainThreadQueries().createFromAsset("room_database.db").build()
                 INSTANCE = instance
                 return instance
             }

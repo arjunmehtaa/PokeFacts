@@ -7,21 +7,44 @@ class RoomPokemonRepository(private val pokemonDao: RoomPokemonDao) : RoomReposi
 
     private val pokemonItemConverter = PokemonItemConverter()
 
-    override fun getFavoritePokemonList() : List<Pokemon>{
-        return pokemonDao.readAllRoomItems().map {
+    override fun getFavoritePokemonList(): List<Pokemon> {
+        return pokemonDao.readFavoriteItems().map {
             pokemonItemConverter.roomPokemonToPokemon(it)
         }
     }
 
-    override suspend fun addFavoritePokemon(pokemon: Pokemon){
+    override fun getAllPokemonList(): List<Pokemon> {
+        return pokemonDao.readFavoriteItems().map {
+            pokemonItemConverter.roomPokemonToPokemon(it)
+        }
+    }
+
+    override fun getSinglePokemon(id: Int): Pokemon {
+        return pokemonItemConverter.roomPokemonToPokemon(pokemonDao.readSingleItem(id))
+    }
+
+    override suspend fun addFavoritePokemon(pokemon: Pokemon) {
+        return pokemonDao.addFavoritePokemon(
+            pokemonItemConverter.pokemonToRoomPokemon(
+                pokemon,
+                true
+            )
+        )
+    }
+
+    override suspend fun removeFavoritePokemon(pokemon: Pokemon) {
+        pokemonDao.removeFavoritePokemon(pokemonItemConverter.pokemonToRoomPokemon(pokemon, false))
+    }
+
+    override suspend fun addPokemon(pokemon: Pokemon) {
         return pokemonDao.addRoomPokemonItem(pokemonItemConverter.pokemonToRoomPokemon(pokemon))
     }
 
-    override fun isPokemonFavorite(id : Int) : Boolean{
+    override fun isPokemonFavorite(id: Int): Boolean {
         return pokemonDao.isPokemonFavorite(id)
     }
 
-    override suspend fun deletePokemon(pokemon: Pokemon){
-        pokemonDao.deletePokemon(pokemonItemConverter.pokemonToRoomPokemon(pokemon))
+    override fun isPokemonSaved(id: Int): Boolean {
+        return pokemonDao.isPokemonSaved(id)
     }
 }
