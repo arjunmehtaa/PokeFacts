@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [RoomPokemon::class], version = 1, exportSchema = false)
+@Database(entities = [RoomPokemon::class], version = 2, exportSchema = false)
 abstract class RoomPokemonDatabase : RoomDatabase() {
 
     abstract fun roomPokemonDao() : RoomPokemonDao
@@ -24,7 +24,7 @@ abstract class RoomPokemonDatabase : RoomDatabase() {
                     context.applicationContext,
                     RoomPokemonDatabase::class.java,
                     "room_database"
-                ).allowMainThreadQueries().createFromAsset("room_database.db").build()
+                ).allowMainThreadQueries().createFromAsset("room_database.db").fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 return instance
             }
