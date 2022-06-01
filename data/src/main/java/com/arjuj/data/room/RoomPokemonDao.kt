@@ -17,7 +17,7 @@ interface RoomPokemonDao {
     @Query("SELECT * FROM pokemon_list WHERE id = :id")
     fun readSingleItem(id: Int): RoomPokemon
 
-    @Update
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addFavoritePokemon(pokemon: RoomPokemon)
 
     @Update
