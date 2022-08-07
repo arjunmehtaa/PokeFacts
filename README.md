@@ -16,13 +16,13 @@ The app allows users to view Pokémons, search them and add them to their favori
   <img src="images/26.jpg" width="18%" />
 </p>
 
-## Google Play Store Link
+## 🔗 Google Play Store Link
 
 PokéFacts is now released on the Google Play Store. Download it by clicking the banner below!
 
 [![](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.arjuj.pokefacts)
 
-## Architecture
+## 🏰 Architecture
 
 * This app follows Clean Architecture Principles paired with MVVM architecture.
 * The project is divided into three modules *app*, *data* and *domain*.
@@ -35,7 +35,7 @@ PokéFacts is now released on the Google Play Store. Download it by clicking the
   <img src="images/architecture.png" width="100%" />
 </p>
 
-## API Used
+## 🛰️ API Used
 
 * PokéAPI is used for retrieving Pokémon information. 
 * The *pokemon* endpoint is used for retrieving  details of a single Pokémon.
@@ -44,7 +44,7 @@ PokéFacts is now released on the Google Play Store. Download it by clicking the
 * Read more about PokéAPI at https://pokeapi.co/
 
 
-## Libraries Used
+## 📚 Libraries Used
 
 * **[Retrofit](https://square.github.io/retrofit/)** - Used to handle API calls to PokéAPI. 
 * **[Koin](https://insert-koin.io/)** - Used for Dependency Injection.
@@ -55,7 +55,7 @@ PokéFacts is now released on the Google Play Store. Download it by clicking the
 
 
 
-## Screens
+## 📱 Screens
 
 ### **Home Fragment**
 * It shows all the Pokémons in a paginated manner.
